@@ -6,12 +6,8 @@
       <class name="Tests.LoginTest">
         <methods>
           <include name="radioButtonForm"/>
-          <include name="fileUpload"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="webTablesForm"/>
-          <include name="buttonsPage"/>
-          <include name="alertsPage"/>
           <include name="fileDownload"/>
         </methods>
       </class> <!-- Tests.LoginTest -->
