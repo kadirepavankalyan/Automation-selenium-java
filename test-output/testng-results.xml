@@ -1,173 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="6" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-18T17:15:06 IST" name="Default suite" finished-at="2024-07-18T17:16:50 IST" duration-ms="104003">
+  <suite started-at="2024-09-09T15:01:12 IST" name="Default suite" finished-at="2024-09-09T15:01:18 IST" duration-ms="6040">
     <groups>
     </groups>
-    <test started-at="2024-07-18T17:15:06 IST" name="Default test" finished-at="2024-07-18T17:16:50 IST" duration-ms="104003">
-      <class name="Tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:15:06 IST" name="setUp" finished-at="2024-07-18T17:15:10 IST" duration-ms="3760" status="PASS">
+    <test started-at="2024-09-09T15:01:12 IST" name="Default test" finished-at="2024-09-09T15:01:18 IST" duration-ms="6040">
+      <class name="SeleniumProject.DataProviderTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumProject.DataProviderTest@38afe297]" started-at="2024-09-09T15:01:12 IST" name="setUp" finished-at="2024-09-09T15:01:15 IST" duration-ms="2636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillTextBoxForm()[pri:1, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:15:10 IST" name="fillTextBoxForm" finished-at="2024-07-18T17:16:08 IST" duration-ms="57405" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:SeleniumProject.DataProviderTest@38afe297]" started-at="2024-09-09T15:01:15 IST" name="loginTest" data-provider="loginData" finished-at="2024-09-09T15:01:18 IST" duration-ms="2426" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fillTextBoxForm -->
-        <test-method signature="checkBoxForm()[pri:2, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:08 IST" name="checkBoxForm" finished-at="2024-07-18T17:16:09 IST" duration-ms="1321" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:SeleniumProject.DataProviderTest@38afe297]" started-at="2024-09-09T15:01:18 IST" name="loginTest" data-provider="loginData" finished-at="2024-09-09T15:01:18 IST" duration-ms="611" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkBoxForm -->
-        <test-method signature="radioButtonForm()[pri:3, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:09 IST" name="radioButtonForm" finished-at="2024-07-18T17:16:14 IST" duration-ms="5533" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <label class="custom-control-label" for="yesRadio">...</label> is not clickable at point (437, 574). Other element would receive the click: <div>...</div>
-  (Session info: chrome=126.0.6478.128)
-Build info: version: '4.22.0', revision: 'c5f3146703'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f9cc0afe3ff54a0272fdb501acfa73c, clickElement {id=f.2ED632259EFAB7BB3DE1A23E3817FE65.d.AA8F6B2157ECBF7B94F0648EF1306DBF.e.96}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\pavanka\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2f9cc0afe3ff54a0272fdb501acfa73c)] -> xpath: //*[@id='app']/div/div/div/div[2]/div[2]/div[2]/label]
-Session ID: 2f9cc0afe3ff54a0272fdb501acfa73c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label class="custom-control-label" for="yesRadio">...</label> is not clickable at point (437, 574). Other element would receive the click: <div>...</div>
-  (Session info: chrome=126.0.6478.128)
-Build info: version: '4.22.0', revision: 'c5f3146703'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f9cc0afe3ff54a0272fdb501acfa73c, clickElement {id=f.2ED632259EFAB7BB3DE1A23E3817FE65.d.AA8F6B2157ECBF7B94F0648EF1306DBF.e.96}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\pavanka\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2f9cc0afe3ff54a0272fdb501acfa73c)] -> xpath: //*[@id='app']/div/div/div/div[2]/div[2]/div[2]/label]
-Session ID: 2f9cc0afe3ff54a0272fdb501acfa73c
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at pages.RadioButtonPage.clickOnYesRadioButton(RadioButtonPage.java:45)
-at Tests.LoginTest.radioButtonForm(LoginTest.java:98)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- radioButtonForm -->
-        <test-method signature="fileDownload()[pri:4, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:14 IST" name="fileDownload" finished-at="2024-07-18T17:16:21 IST" duration-ms="6460" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fileDownload -->
-        <test-method signature="fileUpload()[pri:5, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:21 IST" name="fileUpload" finished-at="2024-07-18T17:16:24 IST" duration-ms="2816" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fileUpload -->
-        <test-method signature="webTablesForm()[pri:6, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:24 IST" name="webTablesForm" finished-at="2024-07-18T17:16:31 IST" duration-ms="7528" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- webTablesForm -->
-        <test-method signature="buttonsPage()[pri:7, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:31 IST" name="buttonsPage" finished-at="2024-07-18T17:16:47 IST" duration-ms="15610" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: rightClickMessage (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.22.0', revision: 'c5f3146703'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\pavanka\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f9cc0afe3ff54a0272fdb501acfa73c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: rightClickMessage (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.22.0', revision: 'c5f3146703'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\pavanka\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f9cc0afe3ff54a0272fdb501acfa73c
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pages.ButtonsPage.getRightClickMessage(ButtonsPage.java:61)
-at Tests.LoginTest.buttonsPage(LoginTest.java:174)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buttonsPage -->
-        <test-method signature="alertsPage()[pri:8, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:47 IST" name="alertsPage" finished-at="2024-07-18T17:16:50 IST" duration-ms="2804" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- alertsPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginTest@302c971f]" started-at="2024-07-18T17:16:50 IST" name="tearDown" finished-at="2024-07-18T17:16:50 IST" duration-ms="604" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumProject.DataProviderTest@38afe297]" started-at="2024-09-09T15:01:18 IST" name="tearDown" finished-at="2024-09-09T15:01:18 IST" duration-ms="280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests.LoginTest -->
+      </class> <!-- SeleniumProject.DataProviderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

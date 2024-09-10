@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.TextBoxPage;
 import utils.ExcelUtils;
@@ -17,26 +18,14 @@ public class TextBoxFormTest {
 
     @BeforeTest
     public void setUp() {
-        // Initialize WebDriver and navigate to the page
         System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         textBoxPage = new TextBoxPage(driver);
         driver.manage().window().maximize();
     }
 
-    @Test(priority = 1)
-    public void fillTextBoxForm() throws IOException {
-        // Set the Excel file and sheet
-        String excelFilePath = "C:\\JavaSelenium\\uploads\\excel\\TestData.xlsx";
-        String sheetName = "TextBoxForm";
-        ExcelUtils.setExcelFile(excelFilePath, sheetName);
-
-        // Read data from Excel
-        String userName = ExcelUtils.getCellData(1, 0); // Assuming first row is header
-        String userEmail = ExcelUtils.getCellData(1, 1);
-        String currentAddress = ExcelUtils.getCellData(1, 2);
-        String permanentAddress = ExcelUtils.getCellData(1, 3);
-
+    @Test(dataProvider = "LoginData")
+    public void fillTextBoxForm(String userName, String userEmail, String currentAddress, String permanentAddress) throws IOException {
         driver.get("https://demoqa.com/text-box");
         Assert.assertEquals(driver.getTitle(), "DEMOQA");
 
@@ -50,14 +39,30 @@ public class TextBoxFormTest {
         Assert.assertTrue(outputText.contains(userName));
         Assert.assertTrue(outputText.contains(userEmail));
         System.out.println("Output Text after clicking on submit with valid details: " + outputText);
+    }
 
-        // Close the Excel file
-        ExcelUtils.closeExcelFile();
+    @DataProvider(name = "LoginData")
+    public Object[][] getData() throws IOException {
+        String path = ".\\uploads\\excel\\TestData.xlsx";
+        ExcelUtils excelUtils = new ExcelUtils(path);
+
+        int totalRows = excelUtils.getRowCount("Sheet1");
+        int totalCols = excelUtils.getCellCount("Sheet1", 1);
+
+        String[][] loginData = new String[totalRows][totalCols];
+
+        for (int i = 1; i <= totalRows; i++) {
+            for (int j = 0; j < totalCols; j++) {
+                loginData[i - 1][j] = excelUtils.getCellData("Sheet1", i, j);
+            }
+        }
+
+        return loginData;
     }
 
     @AfterTest
     public void tearDown() {
-        if(driver != null) {
+        if (driver != null) {
             driver.quit();
         }
     }

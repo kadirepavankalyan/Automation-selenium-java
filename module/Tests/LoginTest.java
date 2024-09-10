@@ -39,7 +39,7 @@ public class LoginTest {
 
     @BeforeTest
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\chromedriver-win64\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\chromedriver-win64\\chromedriver.exe");
         
         // Set download directory
         Map<String, Object> prefs = new HashMap<String, Object>();
